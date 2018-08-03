@@ -3,11 +3,11 @@ const initialState = {
 }
 
 //Action Descriptors
-const UPDATE_INPUT = 'UPDATE_INPUT';
+const UPDATE_USER = 'UPDATE_USER';
 
 export default function reducer (state = initialState, action) {
     switch(action.type) {
-        case UPDATE_INPUT:
+        case UPDATE_USER:
             return {...state, user: action.payload};
 
         default:
@@ -16,9 +16,9 @@ export default function reducer (state = initialState, action) {
 }
 
 //Action Builders
-export function updateInput (value) {
+export function updateUser (value) {
     return {
-        type: UPDATE_INPUT,
+        type: UPDATE_USER,
         payload: value
     }
 }
